@@ -1,21 +1,23 @@
-[4/26, 11:20] 🤣: [4/26, 11:07] Meta AI: Here are solutions to various tree algorithms:
 
-1. Height of a Tree
+## [4/26, 11:20] 🤣: [4/26, 11:07] Meta AI: Here are solutions to various tree algorithms:
+
+### 1. Height of a Tree
 - *Problem*: Find the height of a tree.
 - *Approach*: Use recursive or iterative DFS to find the maximum depth of the tree.
 - *Code*:
-```
+
+```py
 def height(root):
     if not root:
         return 0
     return 1 + max(height(root.left), height(root.right))
 ```
 
-2. Balanced Tree
+### 2. Balanced Tree
 - *Problem*: Check if a tree is balanced.
 - *Approach*: Use recursive DFS to check if the height difference between left and right subtrees is within a certain threshold.
 - *Code*:
-```
+```py
 def is_balanced(root):
     def check(node):
         if not node:
@@ -28,11 +30,11 @@ def is_balanced(root):
     return check(root) != -1
 ```
 
-3. Diameter of a Tree
+### 3. Diameter of a Tree
 - *Problem*: Find the diameter of a tree.
 - *Approach*: Use recursive DFS to find the maximum path length between two nodes.
 - *Code*:
-```
+```py
 def diameter(root):
     max_diameter = 0
     def dfs(node):
@@ -47,22 +49,22 @@ def diameter(root):
     return max_diameter
 ```
 
-4. Sum of Tree Nodes
+### 4. Sum of Tree Nodes
 - *Problem*: Find the sum of all node values in a tree.
 - *Approach*: Use recursive or iterative DFS to sum up node values.
 - *Code*:
-```
+```py
 def sum_tree(root):
     if not root:
         return 0
     return root.val + sum_tree(root.left) + sum_tree(root.right)
 ```
 
-5. Symmetrical Tree
+### 5. Symmetrical Tree
 - *Problem*: Check if a tree is symmetrical.
 - *Approach*: Use recursive DFS to compare left and right subtrees.
 - *Code*:
-```
+```py
 def is_symmetrical(root):
     def is_mirror(node1, node2):
         if not node1 and not node2:
@@ -73,11 +75,11 @@ def is_symmetrical(root):
     return is_mirror(root.left, root.right)
 ```
 
-6. Identical Trees
+### 6. Identical Trees
 - *Problem*: Check if two trees are identical.
 - *Approach*: Use recursive DFS to compare node values and structure.
 - *Code*:
-```
+```py
 def is_identical(root1, root2):
     if not root1 and not root2:
         return True
@@ -86,11 +88,11 @@ def is_identical(root1, root2):
     return root1.val == root2.val and is_identical(root1.left, root2.left) and is_identical(root1.right, root2.right)
 ```
 
-7. Zigzag Traversal
+### 7. Zigzag Traversal
 - *Problem*: Perform zigzag traversal of a tree.
 - *Approach*: Use level order traversal with a flag to toggle direction.
 - *Code*:
-```
+```py
 def zigzag_traversal(root):
     result = []
     queue = [root]
@@ -113,11 +115,11 @@ def zigzag_traversal(root):
     return result
 ```
 
-8. Boundary Traversal
+### 8. Boundary Traversal
 - *Problem*: Perform boundary traversal of a tree.
 - *Approach*: Use DFS to traverse left boundary, leaves, and right boundary.
 - *Code*:
-```
+```py
 def boundary_traversal(root):
     result = []
     def add_left_boundary(node):
@@ -142,11 +144,11 @@ def boundary_traversal(root):
 ```
 [4/26, 11:09] Meta AI: Here are solutions to various tree algorithms:
 
-1. Vertical Order Traversal
+### 9. Vertical Order Traversal
 - *Problem*: Traverse a tree in vertical order.
 - *Approach*: Use a hash map to store nodes at each horizontal distance.
 - *Code*:
-```
+```py
 def vertical_order(root):
     if not root:
         return []
@@ -167,11 +169,11 @@ def vertical_order(root):
     return [columnTable[x] for x in range(min_column, max_column + 1)]
 ```
 
-2. Top View
+### 10. Top View
 - *Problem*: Find the top view of a tree.
 - *Approach*: Use a hash map to store the first node at each horizontal distance.
 - *Code*:
-```
+```py
 def top_view(root):
     if not root:
         return []
@@ -190,11 +192,11 @@ def top_view(root):
     return [columnTable[x] for x in range(min_column, max_column + 1)]
 ```
 
-3. Bottom View
+### 11. Bottom View
 - *Problem*: Find the bottom view of a tree.
 - *Approach*: Use a hash map to store the last node at each horizontal distance.
 - *Code*:
-```
+```py
 def bottom_view(root):
     if not root:
         return []
@@ -212,11 +214,11 @@ def bottom_view(root):
     return [columnTable[x] for x in range(min_column, max_column + 1)]
 ```
 
-4. Left View
+### 12. Left View
 - *Problem*: Find the left view of a tree.
 - *Approach*: Use level order traversal and store the first node at each level.
 - *Code*:
-```
+```py
 def left_view(root):
     if not root:
         return []
@@ -234,11 +236,11 @@ def left_view(root):
     return result
 ```
 
-5. Right View
+### 13. Right View
 - *Problem*: Find the right view of a tree.
 - *Approach*: Use level order traversal and store the last node at each level.
 - *Code*:
-```
+```py
 def right_view(root):
     if not root:
         return []
@@ -256,11 +258,11 @@ def right_view(root):
     return result
 ```
 
-6. Lowest Common Ancestor
+### 14. Lowest Common Ancestor
 - *Problem*: Find the lowest common ancestor of two nodes.
 - *Approach*: Use recursive DFS to find the LCA.
 - *Code*:
-```
+```py
 def lowest_common_ancestor(root, p, q):
     if not root:
         return None
@@ -273,20 +275,11 @@ def lowest_common_ancestor(root, p, q):
     return left_lca if left_lca else right_lca
 ```
 
-7. Time Taken to Burn a Tree
-- *Problem*: Find the time taken to burn a tree from a given node.
-- *Approach*: Use BFS to find the maximum distance from the given node.
-- *Code*:
-```
-def time_to_burn(root
-```
-[4/26, 11:11] Meta AI: Here are solutions to various tree algorithms:
-
-1. Width of a Tree
+### 15. Width of a Tree
 - *Problem*: Find the maximum width of a tree.
 - *Approach*: Use level order traversal to find the maximum number of nodes at any level.
 - *Code*:
-```
+```py
 def width(root):
     if not root:
         return 0
@@ -304,22 +297,22 @@ def width(root):
     return max_width
 ```
 
-2. Sum of Tree Nodes
+### 16. Sum of Tree Nodes
 - *Problem*: Find the sum of all node values in a tree.
 - *Approach*: Use recursive or iterative DFS to sum up node values.
 - *Code*:
-```
+```py
 def sum_tree(root):
     if not root:
         return 0
     return root.val + sum_tree(root.left) + sum_tree(root.right)
 ```
 
-3. Nodes at Distance K
+### 17. Nodes at Distance K
 - *Problem*: Find all nodes at a distance K from a given node.
 - *Approach*: Use DFS or BFS to find nodes at distance K.
 - *Code*:
-```
+```py
 def nodes_at_distance_k(root, target, k):
     if not root:
         return []
@@ -335,11 +328,11 @@ def nodes_at_distance_k(root, target, k):
     return result
 ```
 
-4. Time Taken to Burn a Tree
+### 18. Time Taken to Burn a Tree
 - *Problem*: Find the time taken to burn a tree from a given node.
 - *Approach*: Use BFS to find the maximum distance from the given node.
 - *Code*:
-```
+```py
 def time_to_burn(root, target):
     if not root:
         return 0
@@ -370,22 +363,22 @@ def time_to_burn(root, target):
     return time - 1
 ```
 
-5. Complete Tree Node Count
+### 19. Complete Tree Node Count
 - *Problem*: Count the number of nodes in a complete binary tree.
 - *Approach*: Use recursive or iterative approach to count nodes.
 - *Code*:
-```
+```py
 def count_nodes(root):
     if not root:
         return 0
     return 1 + count_nodes(root.left) + count_nodes(root.right)
 ```
 
-6. Unique Binary Trees
+### 20. Unique Binary Trees
 - *Problem*: Find the number of unique binary trees that can be formed with n nodes.
 - *Approach*: Use dynamic programming to calculate the number of unique trees.
 - *Code*:
-```
+```py
 def num_unique_trees(n):
     dp = [0] * (n + 1)
     dp[0] = 1
@@ -396,11 +389,11 @@ def num_unique_trees(n):
     return dp[n]
 ```
 
-7. Construction using Preorder
+### 21. Construction using Preorder
 - *Problem*: Construct a binary tree from preorder traversal.
 - *Approach*: Use recursive approach to construct the tree.
 - *Code*:
-```
+```py
 def construct_from_preorder(preorder):
     if not preorder:
         return None
@@ -418,20 +411,20 @@ def construct_from_preorder(preorder):
     return root
 ```
 
-8. Construction using Postorder
+### 22. Construction using Postorder
 - *Problem*: Construct a binary tree from postorder traversal.
 - *Approach*: Use recursive approach to construct the tree.
 - *Code*:
-```
+```py
 def construct_from
 ```
 [4/26, 11:12] Meta AI: Here are solutions to tree algorithms construction using inorder:
 
-1. Construction using Inorder and Preorder
+### 23. Construction using Inorder and Preorder
 - *Problem*: Construct a binary tree from inorder and preorder traversals.
 - *Approach*: Use recursive approach to construct the tree.
 - *Code*:
-```
+```py
 def build_tree(preorder, inorder):
     if not preorder or not inorder:
         return None
@@ -442,11 +435,11 @@ def build_tree(preorder, inorder):
     return root
 ```
 
-2. Construction using Inorder and Postorder
+### 24. Construction using Inorder and Postorder
 - *Problem*: Construct a binary tree from inorder and postorder traversals.
 - *Approach*: Use recursive approach to construct the tree.
 - *Code*:
-```
+```py
 def build_tree(inorder, postorder):
     if not inorder or not postorder:
         return None
@@ -471,9 +464,10 @@ inorder = [9, 3, 15, 20, 7]
 postorder = [9, 15, 7, 20, 3]
 root = build_tree(inorder, postorder)
 ```
-[4/26, 16:15] 🤣: [4/26, 15:57] Meta AI: Here are solutions to various graph algorithms:
+# GRAPH ALGO
+## [4/26, 16:15] 🤣: [4/26, 15:57] Meta AI: Here are solutions to various graph algorithms:
 
-1. Breadth-First Search (BFS)
+### 1. Breadth-First Search (BFS)
 - *Problem*: Traverse a graph level by level, starting from a given node.
 - *Approach*: Use a queue to keep track of nodes to visit.
 - *Code*:
@@ -493,11 +487,11 @@ def bfs(graph, start):
                 visited.add(neighbor)
 ```
 
-2. Depth-First Search (DFS)
+### 2. Depth-First Search (DFS)
 - *Problem*: Traverse a graph by visiting a node and then visiting all of its neighbors before backtracking.
 - *Approach*: Use a stack or recursion to keep track of nodes to visit.
 - *Code*:
-```
+```py
 def dfs(graph, start):
     visited = set()
     def recursive_dfs(node):
@@ -509,11 +503,11 @@ def dfs(graph, start):
     recursive_dfs(start)
 ```
 
-3. Number of Provinces
+### 3. Number of Provinces
 - *Problem*: Find the number of connected components in a graph.
 - *Approach*: Use DFS or BFS to traverse the graph and count the number of connected components.
 - *Code*:
-```
+```py
 def find_provinces(graph):
     visited = set()
     count = 0
@@ -524,11 +518,11 @@ def find_provinces(graph):
     return count
 ```
 
-4. Number of Islands
+### 4. Number of Islands
 - *Problem*: Find the number of islands in a grid.
 - *Approach*: Use DFS or BFS to traverse the grid and count the number of islands.
 - *Code*:
-```
+```py
 def num_islands(grid):
     if not grid:
         return 0
@@ -541,11 +535,11 @@ def num_islands(grid):
     return count
 ```
 
-5. Flood Fill
+### 5. Flood Fill
 - *Problem*: Fill a region of a grid with a new color.
 - *Approach*: Use DFS or BFS to traverse the region and fill it with the new color.
 - *Code*:
-```
+```py
 def flood_fill(grid, x, y, new_color):
     old_color = grid[x][y]
     if old_color == new_color:
@@ -561,7 +555,7 @@ def flood_fill(grid, x, y, new_color):
     return grid
 ```
 
-6. Rotten Orange
+### 6. Rotten Orange
 - *Problem*: Find the minimum time required to rot all oranges in a grid.
 - *Approach*: Use BFS to traverse the grid and find the minimum time.
 - *Code*:
@@ -591,11 +585,11 @@ def oranges_rotting(grid):
     return minutes if fresh_count == 0 else -1
 ```
 
-7. Detect Cycle in Undirected Graph
+### 7. Detect Cycle in Undirected Graph
 - *Problem*: Detect whether a cycle exists in an undirected graph.
 - *Approach*: Use DFS to traverse the graph and detect cycles.
 - *Code*:
-```
+```py
 def has_cycle(graph):
     visited = set()
     for node in graph:
@@ -609,11 +603,11 @@ def dfs(graph, node, visited, parent):
 ```
 [4/26, 15:59] Meta AI: Here are solutions to various graph algorithms:
 
-1. Detect Cycle in Undirected Graph
+### 7. Detect Cycle in Undirected Graph
 - *Problem*: Detect whether a cycle exists in an undirected graph.
 - *Approach*: Use DFS to traverse the graph and detect cycles.
 - *Code*:
-```
+```py
 def has_cycle(graph):
     visited = set()
     for node in graph:
@@ -633,11 +627,11 @@ def dfs(graph, node, visited, parent):
     return False
 ```
 
-2. Detect Cycle in Directed Graph
+### 8. Detect Cycle in Directed Graph
 - *Problem*: Detect whether a cycle exists in a directed graph.
 - *Approach*: Use DFS to traverse the graph and detect cycles.
 - *Code*:
-```
+```py
 def has_cycle(graph):
     visited = set()
     recursion_stack = set()
@@ -660,7 +654,7 @@ def dfs(graph, node, visited, recursion_stack):
     return False
 ```
 
-3. Distance Nearest
+### 9. Distance Nearest
 - *Problem*: Find the shortest distance from a given node to all other nodes in a graph.
 - *Approach*: Use BFS to traverse the graph and calculate distances.
 - *Code*:
@@ -679,11 +673,11 @@ def distance_nearest(graph, start):
     return distances
 ```
 
-4. Surrounded Regions
+### 10. Surrounded Regions
 - *Problem*: Capture all regions surrounded by 'X' in a grid.
 - *Approach*: Use DFS to traverse the grid and capture surrounded regions.
 - *Code*:
-```
+```py
 def solve(board):
     if not board:
         return
@@ -709,11 +703,11 @@ def solve(board):
                 board[i][j] = 'O'
 ```
 
-5. Number of Enclaves
+### 11. Number of Enclaves
 - *Problem*: Find the number of 'O' regions that are not connected to the boundary.
 - *Approach*: Use DFS to traverse the grid and count enclaves.
 - *Code*:
-```
+```py
 def num_enclaves(grid):
     m, n = len(grid), len(grid[0])
     def dfs(i, j):
@@ -737,21 +731,21 @@ def num_enclaves(grid):
     return count
 ```
 
-6. Distinct Islands
+### 12. Distinct Islands
 - *Problem*: Find the number of distinct islands in a grid.
 - *Approach*: Use DFS to traverse the grid and count distinct islands.
 - *Code*:
-```
+```py
 def num_distinct_islands(grid):
     m, n = len(grid), len
 ```
 [4/26, 16:01] Meta AI: Here are solutions to various graph algorithms:
 
-1. Bipartite Graph
+### 13. Bipartite Graph
 - *Problem*: Determine if a graph is bipartite.
 - *Approach*: Use DFS or BFS to traverse the graph and assign colors to nodes.
 - *Code*:
-```
+```py
 def is_bipartite(graph):
     colors = {}
     for node in graph:
@@ -771,11 +765,11 @@ def dfs(graph, node, colors, color):
     return True
 ```
 
-2. Find Eventual Safe State
+### 14. Find Eventual Safe State
 - *Problem*: Find all nodes that are eventual safe states in a directed graph.
 - *Approach*: Use DFS to traverse the graph and identify safe nodes.
 - *Code*:
-```
+```py
 def eventual_safe_nodes(graph):
     safe = [False] * len(graph)
     visited = [False] * len(graph)
@@ -793,11 +787,11 @@ def eventual_safe_nodes(graph):
     return [i for i in range(len(graph)) if safe[i]]
 ```
 
-3. Topological Sort
+### 15. Topological Sort
 - *Problem*: Perform a topological sort on a directed acyclic graph (DAG).
 - *Approach*: Use DFS or Kahn's algorithm to traverse the graph and order nodes.
 - *Code*:
-```
+```py
 def topological_sort(graph):
     in_degree = {node: 0 for node in graph}
     for node in graph:
@@ -815,11 +809,11 @@ def topological_sort(graph):
     return result
 ```
 
-4. Kahn's Algorithm
+### 16. Kahn's Algorithm
 - *Problem*: Perform a topological sort using Kahn's algorithm.
 - *Approach*: Use a queue to traverse the graph and order nodes.
 - *Code*:
-```
+```py
 def kahns_algorithm(graph):
     in_degree = {node: 0 for node in graph}
     for node in graph:
@@ -837,11 +831,11 @@ def kahns_algorithm(graph):
     return result
 ```
 
-5. Course Schedule
+### 17. Course Schedule
 - *Problem*: Determine if a course schedule is valid.
 - *Approach*: Use DFS or topological sort to traverse the graph and detect cycles.
 - *Code*:
-```
+```py
 def can_finish(num_courses, prerequisites):
     graph = [[] for _ in range(num_courses)]
     visited = [0] * num_courses
@@ -864,7 +858,7 @@ def can_finish(num_courses, prerequisites):
     return True
 ```
 
-6. Shortest Path in Directed Graph
+### 18. Shortest Path in Directed Graph
 - *Problem*: Find the shortest path from a source node to all other nodes in a directed graph.
 - *Approach*: Use Dijkstra's algorithm or Bellman-Ford algorithm to traverse the graph and calculate distances.
 - *Code*:
@@ -887,11 +881,11 @@ def shortest_path(graph, source):
 ```
 [4/26, 16:04] Meta AI: Here are solutions to various graph algorithms:
 
-1. Eventual Safe State
+### 19. Eventual Safe State
 - *Problem*: Find all nodes that are eventual safe states in a directed graph.
 - *Approach*: Use DFS to traverse the graph and identify safe nodes.
 - *Code*:
-```
+```py
 def eventual_safe_nodes(graph):
     n = len(graph)
     safe = [False] * n
@@ -910,7 +904,7 @@ def eventual_safe_nodes(graph):
     return [i for i in range(n) if safe[i]]
 ```
 
-2. Shortest Path in Directed Graph
+### 20. Shortest Path in Directed Graph
 - *Problem*: Find the shortest path from a source node to all other nodes in a directed graph.
 - *Approach*: Use Dijkstra's algorithm to traverse the graph and calculate distances.
 - *Code*:
@@ -933,7 +927,7 @@ def shortest_path(graph, source):
     return distances
 ```
 
-3. Shortest Path in Undirected Graph
+### 21. Shortest Path in Undirected Graph
 - *Problem*: Find the shortest path from a source node to all other nodes in an undirected graph.
 - *Approach*: Use Dijkstra's algorithm or BFS to traverse the graph and calculate distances.
 - *Code*:
@@ -956,7 +950,7 @@ def shortest_path(graph, source):
     return distances
 ```
 
-4. Word Ladder 1
+### 22. Word Ladder 1
 - *Problem*: Find the shortest transformation sequence from a begin word to an end word.
 - *Approach*: Use BFS to traverse the graph and find the shortest path.
 - *Code*:
@@ -979,7 +973,7 @@ def ladder_length(begin_word, end_word, word_list):
     return 0
 ```
 
-5. Dijkstra's Algorithm using Set
+### 23. Dijkstra's Algorithm using Set
 - *Problem*: Implement Dijkstra's algorithm using a set data structure.
 - *Approach*: Use a set to keep track of nodes with minimum distance.
 - *Code*:
@@ -1002,7 +996,7 @@ def dijkstra(graph, source):
     return distances
 ```
 
-6. Path with Minimum Effort
+### 24. Path with Minimum Effort
 - *Problem*: Find the path with minimum effort in a graph.
 - *Approach*: Use Dijkstra's algorithm to traverse the graph and calculate distances.
 - *Code*:
@@ -1022,7 +1016,7 @@ def minimum_effort_path(grid):
 ```
 [4/26, 16:10] Meta AI: Here are solutions to various graph algorithms:
 
-1. Cheapest Flight with K Stops
+### 25. Cheapest Flight with K Stops
 - *Problem*: Find the cheapest flight from a source city to a destination city with at most K stops.
 - *Approach*: Use Bellman-Ford algorithm or Dijkstra's algorithm with a priority queue to traverse the graph and calculate distances.
 - *Code*:
@@ -1041,7 +1035,7 @@ def find_cheapest_price(n, flights, src, dst, k):
     return prices[dst] if prices[dst] != float('inf') else -1
 ```
 
-2. Minimum Multiplication to Reach End
+### 26. Minimum Multiplication to Reach End
 - *Problem*: Find the minimum number of multiplications required to reach the end node from the start node in a graph.
 - *Approach*: Use BFS or Dijkstra's algorithm to traverse the graph and calculate distances.
 - *Code*:
@@ -1065,11 +1059,11 @@ def min_operations(nums, start, end):
     return -1
 ```
 
-3. Number of Ways to Arrive at Destination
+### 27. Number of Ways to Arrive at Destination
 - *Problem*: Find the number of ways to arrive at a destination node from a source node in a graph.
 - *Approach*: Use dynamic programming to traverse the graph and calculate the number of ways.
 - *Code*:
-```
+```py
 def count_ways(graph, source, destination):
     ways = [0] * len(graph)
     ways[source] = 1
@@ -1080,11 +1074,11 @@ def count_ways(graph, source, destination):
     return ways[destination]
 ```
 
-4. Bellman-Ford Algorithm
+### 28. Bellman-Ford Algorithm
 - *Problem*: Find the shortest path from a source node to all other nodes in a weighted graph.
 - *Approach*: Use Bellman-Ford algorithm to traverse the graph and calculate distances.
 - *Code*:
-```
+```py
 def bellman_ford(graph, source):
     distances = [float('inf')] * len(graph)
     distances[source] = 0
@@ -1100,11 +1094,11 @@ def bellman_ford(graph, source):
     return distances
 ```
 
-5. Floyd-Warshall Algorithm
+### 29. Floyd-Warshall Algorithm
 - *Problem*: Find the shortest path between all pairs of nodes in a weighted graph.
 - *Approach*: Use Floyd-Warshall algorithm to traverse the graph and calculate distances.
 - *Code*:
-```
+```py
 def floyd_warshall(graph):
     n = len(graph)
     distances = [[float('inf')] * n for _ in range(n)]
@@ -1120,7 +1114,7 @@ def floyd_warshall(graph):
     return distances
 ```
 
-6. Prim's Algorithm
+### 30. Prim's Algorithm
 - *Problem*: Find the minimum spanning tree of a graph.
 - *Approach*: Use Prim's algorithm to traverse the graph and calculate the minimum spanning tree.
 - *Code*:
@@ -1152,7 +1146,7 @@ How Does Prim's Algorithm Work?
 4. *Repeat*: Repeat steps 2-3 until all nodes are included in the tree.
 
 Example Code
-```
+```py
 import heapq
 
 def prim(graph):
@@ -1189,13 +1183,14 @@ The time complexity of Prim's algorithm is O(E log V), where E is the number of 
 
 Space Complexity
 The space complexity of Prim's algorithm is O(V + E), where V is the number of vertices and E is the number of edges.
-[4/26, 22:23] 🤣: [4/26, 17:44] Meta AI: Here are solutions to various stack and queue problems:
 
-1. Check for Balanced Parentheses
+## [4/26, 22:23] 🤣: [4/26, 17:44] Meta AI: Here are solutions to various stack and queue problems:
+
+### 1. Check for Balanced Parentheses
 - *Problem*: Check if a string of parentheses is balanced.
 - *Approach*: Use a stack to keep track of opening parentheses.
 - *Code*:
-```
+```py
 def is_balanced(s):
     stack = []
     mapping = {")": "(", "}": "{", "]": "["}
@@ -1212,7 +1207,7 @@ def is_balanced(s):
 - *Problem*: Convert a prefix expression to postfix.
 - *Approach*: Use a stack to keep track of operators.
 - *Code*:
-```
+```py
 def prefix_to_postfix(prefix):
     stack = []
     operators = set(['+', '-', '*', '/'])
@@ -1230,7 +1225,7 @@ def prefix_to_postfix(prefix):
 - *Problem*: Convert an infix expression to postfix.
 - *Approach*: Use a stack to keep track of operators.
 - *Code*:
-```
+```py
 def infix_to_postfix(infix):
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2}
     stack = []
@@ -1283,11 +1278,11 @@ class MinStack:
             return self.min_stack[-1]
 ```
 
-5. Next Greater Element
+### 5. Next Greater Element
 - *Problem*: Find the next greater element for each element in an array.
 - *Approach*: Use a stack to keep track of elements.
 - *Code*:
-```
+```py
 def next_greater_element(nums):
     stack = []
     result = [-1] * len(nums)
@@ -1298,11 +1293,11 @@ def next_greater_element(nums):
     return result
 ```
 
-6. Trapping Rain Water
+### 6. Trapping Rain Water
 - *Problem*: Calculate the amount of rain water that can be trapped.
 - *Approach*: Use two pointers to keep track of maximum height.
 - *Code*:
-```
+```py
 def trap(height):
     left, right = 0, len(height) - 1
     max_left, max_right = 0, 0
@@ -1323,11 +1318,11 @@ def trap(height):
     return result
 ```
 
-7. Largest Rectangle in Histogram
+### 7. Largest Rectangle in Histogram
 - *Problem*: Find the area of the largest rectangle in a histogram.
 - *Approach*: Use a stack to keep track of indices.
 - *Code*:
-```
+```py
 def largest_rectangle_area(heights):
     stack = []
     max_area = 0
@@ -1340,11 +1335,11 @@ def largest_rectangle_area(heights):
 ```
 [4/26, 17:47] Meta AI: Here are solutions to various stack and queue problems:
 
-1. Previous Smaller Element
+### 1. Previous Smaller Element
 - *Problem*: Find the previous smaller element for each element in an array.
 - *Approach*: Use a stack to keep track of elements.
 - *Code*:
-```
+```py
 def previous_smaller_element(nums):
     stack = []
     result = [-1] * len(nums)
@@ -1361,7 +1356,7 @@ def previous_smaller_element(nums):
 - *Problem*: Calculate the sum of minimum elements of all subarrays.
 - *Approach*: Use a stack to keep track of elements.
 - *Code*:
-```
+```py
 def sum_subarray_min(nums):
     stack = []
     result = 0
@@ -1380,7 +1375,7 @@ def sum_subarray_min(nums):
 - *Problem*: Determine the outcome of asteroid collisions.
 - *Approach*: Use a stack to keep track of asteroids.
 - *Code*:
-```
+```py
 def asteroid_collision(asteroids):
     stack = []
     for asteroid in asteroids:
@@ -1400,7 +1395,7 @@ def asteroid_collision(asteroids):
 - *Problem*: Find the area of the largest rectangle in a histogram.
 - *Approach*: Use a stack to keep track of indices.
 - *Code*:
-```
+```py
 def largest_rectangle_area(heights):
     stack = []
     max_area = 0
@@ -1417,11 +1412,11 @@ def largest_rectangle_area(heights):
     return max_area
 ```
 
-5. Remove K Digits
+### 5. Remove K Digits
 - *Problem*: Remove k digits from a number to form the smallest possible number.
 - *Approach*: Use a stack to keep track of digits.
 - *Code*:
-```
+```py
 def remove_k_digits(num, k):
     stack = []
     for digit in num:
@@ -1435,11 +1430,11 @@ def remove_k_digits(num, k):
     return ''.join(stack).lstrip('0') or '0'
 ```
 
-6. Stock Span
+### 6. Stock Span
 - *Problem*: Calculate the stock span for each day.
 - *Approach*: Use a stack to keep track of indices.
 - *Code*:
-```
+```py
 def stock_span(prices):
     stack = []
     result = []
@@ -1451,7 +1446,7 @@ def stock_span(prices):
     return result
 ```
 
-7. Sliding Window Minimum
+### 7. Sliding Window Minimum
 - *Problem*: Find the minimum element in a sliding window.
 - *Approach*: Use a deque to keep track of indices.
 - *Code*:
@@ -1472,11 +1467,11 @@ def sliding_window_min(nums, k):
     return result
 ```
 
-8. Celebrity Problem
+### 8. Celebrity Problem
 - *Problem*: Find the celebrity in a group of people.
 - *Approach*: Use a stack to keep track of candidates.
 - *Code*:
-```
+```py
 def find_celebrity(matrix):
     stack = list(range(len(matrix)))
     while len(stack) > 1:
